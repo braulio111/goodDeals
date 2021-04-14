@@ -82,6 +82,19 @@ nav {
   align-items: center;
 }
 
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+}
+
 nav h1 {
   color: #eeeeee;
   font-weight: bold;
@@ -91,6 +104,8 @@ nav h1 {
 nav input {
   height: 27px;
   border-radius: 5px;
+  border: none;
+  padding-left: 5px;
   width: 60%;
   margin-left: auto;
 }
@@ -198,6 +213,119 @@ li span {
   margin-left: 10px;
 }
 
+.featured-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 10px 10px 10px;
+}
+
+main h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.featured-deal {
+  width: 100%;
+  display: flex;
+  height: 250px;
+  align-items: flex-end;
+}
+
+.featured-deal-info {
+  padding: 10px;
+  color: #252525;
+  font-weight: bold;
+}
+
+.featured-deal-info h2 {
+  margin-bottom: 10px;
+}
+
+.featured-deal-info h3 {
+  width: 70px;
+  text-align: center;
+}
+
+.featured-deal-info h2, .featured-deal-info h3 {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #d3d3d3ab;
+}
+
+.best-deals {
+  margin: 50px 10px 80px 10px;
+}
+
+.best-deals-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.best-deals-label a {
+  text-decoration: none;
+  color: #000;
+}
+
+.deal-cards-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.deal-card {
+  width: 300px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.deal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.deal-discount-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.deal-discount {
+  color: #ff2e2e;
+}
+
+.deal-title, .deal-store {
+  font-weight: bold;
+}
+
+.game-image {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.steam-deals {
+  display: flex;
+  align-items: center;
+}
+
+.steam-deals span {
+  margin-left: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer span {
+  margin-left: 10px;
+}
+
 @media (min-width: 769px) {
   .navbar-menu {
     display: none;
@@ -209,6 +337,14 @@ li span {
 
   .navbar-links, .navbar-logo-title {
     display: block;
+  }
+}
+
+@media (max-width: 769px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    background-color: #252525ee;
   }
 }
 

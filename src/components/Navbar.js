@@ -18,7 +18,7 @@ export const Navbar = () => {
           <IoGameControllerOutline className="navbar-logo"/>
         </div>
       </Link>
-      <input type="text" />
+      <input type="text" placeholder="Search for a deal..."/>
       <div className="navbar-links">
         <ul>
           <Link to="/deals"><li>Deals</li></Link>
@@ -32,8 +32,8 @@ export const Navbar = () => {
         <div></div>
       </div>
       <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className="nav-sidebar-links">
-          <li onClick={showSidebar} className="close-icon"><AiOutlineClose /></li>
+        <ul className="nav-sidebar-links" onClick={showSidebar}>
+          <li className="close-icon"><AiOutlineClose /></li>
           <Link to="/deals"><li className="sidebar-link"><GiPriceTag /><span>Deals</span></li></Link>
           <Link to="/games"><li className="sidebar-link"><CgGames /><span>Games</span></li></Link>
           <Link to="/stores"><li className="sidebar-link"><IoStorefront /><span>Stores</span></li></Link>
