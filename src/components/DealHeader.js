@@ -8,7 +8,7 @@ export const DealHeader = (props) => {
   
   useEffect(() => {
     const fetchImage = async () => {
-      await axios.get(`https://store.steampowered.com/api/appdetails?appids=${steamID}`)
+      await axios.get(`https://cors-anywhere.herokuapp.com/https://store.steampowered.com/api/appdetails?appids=${steamID}`)
         .then(response => setGameInfo(response.data[steamID].data))
         .catch(err => console.log(err))
     }
