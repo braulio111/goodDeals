@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export const DealCard = (props) => {
-  const { steamID, title, image, storeID, price, discount } = props;
+  const { dealID, steamID, title, image, storeID, price, discount } = props;
 
   const [betterImage, setBetterImage] = useState([]);
   const [store, setStore] = useState([]);
 
   useEffect(() => {
     const fetchImage = async () => {
-      await axios.get(`https://cors-anywhere.herokuapp.com/https://store.steampowered.com/api/appdetails?appids=${steamID}`)
+      await axios.get(`https://thingproxy.freeboard.io/fetch/https://store.steampowered.com/api/appdetails?appids=${steamID}`)
         .then(response => setBetterImage(response.data[steamID].data.header_image))
         .catch(err => console.log(err))
     }
@@ -28,6 +29,7 @@ export const DealCard = (props) => {
   }, [steamID, storeID]);
 
   return (
+    <Link to={`/game/${dealID}`}>
     <div className="deal-card">
       <img src={steamID ? betterImage : image} className="game-image" alt="" />
         <div className="deal-info">
@@ -39,5 +41,6 @@ export const DealCard = (props) => {
           <h4 className="deal-store">{store}</h4>
       </div>
     </div>
+    </Link>
   )
 }

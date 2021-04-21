@@ -3,11 +3,12 @@ import { IoGameControllerOutline, IoStorefront } from 'react-icons/io5';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GiPriceTag } from 'react-icons/gi';
 import { CgGames } from 'react-icons/cg';
+import { BsSearch } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-
 
 export const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
+  const [input, setInput] = useState("");
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -15,10 +16,11 @@ export const Navbar = () => {
     <nav>
       <Link to="/">
         <div className="logo">
-          <IoGameControllerOutline className="navbar-logo"/>
+          <IoGameControllerOutline className="navbar-logo" />
         </div>
       </Link>
-      <input type="text" placeholder="Search for a deal..."/>
+      <input type="input" placeholder="Search for a deal..." onInput={e => setInput(e.target.value)} />
+      <Link to={`/search/${input}`}><BsSearch className="search-icon"/></Link>
       <div className="navbar-links">
         <ul>
           <Link to="/deals"><li>Deals</li></Link>

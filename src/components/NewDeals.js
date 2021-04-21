@@ -25,7 +25,7 @@ export const NewDeals = () => {
         {
           deals.map(deal => {
             return(
-              <DealCard key={deal.dealID} steamID={deal.steamAppID} title={deal.title} image={deal.thumb} storeID={deal.storeID} price={deal.salePrice} discount={deal.savings} />
+              <DealCard key={deal.dealID} dealID={deal.dealID} steamID={deal.steamAppID} title={deal.title} image={deal.thumb} storeID={deal.storeID} price={deal.salePrice} discount={deal.savings} />
             );
           })
         }

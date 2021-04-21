@@ -9,7 +9,7 @@ export const FeaturedDeal = (props) => {
       <div className="featured-deal" style={{backgroundImage: `url(${image})`}}>
         <div className="featured-deal-info" >
           <h2>{title}</h2>
-          <h3>${price}</h3>
+          <h3>{price === "0.00" ? "Free" : `${price}`}</h3>
         </div>
       </div>
     </>

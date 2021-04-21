@@ -5,6 +5,8 @@ import { HomeScreen } from "./screens/HomeScreen";
 import { StoreScreen } from "./screens/StoreScreen";
 import { GamesScreen } from "./screens/GamesScreen";
 import { Footer } from "./components/Footer";
+import { DealScreen } from "./screens/DealScreen";
+import { SearchScreen } from "./screens/SearchScreen";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/deals" component={DealsScreen} exact />
             <Route path="/games" component={GamesScreen} exact />
             <Route path="/stores" component={StoreScreen} exact />
+            <Route path="/game/:id" component={DealScreen} />
+            <Route path="/search/:game" component={SearchScreen} />
           </Switch>
         </main>
         <Footer />

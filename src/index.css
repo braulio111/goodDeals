@@ -59,9 +59,14 @@ code {
     monospace;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: #eeeeee;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 
 .grid-container {
@@ -106,8 +111,13 @@ nav input {
   border-radius: 5px;
   border: none;
   padding-left: 5px;
-  width: 60%;
+  width: 50%;
   margin-left: auto;
+}
+
+.search-icon {
+  font-size: 20px;
+  margin: 0px 10px;
 }
 
 .navbar-logo {
@@ -306,7 +316,7 @@ main h1 {
 
 .game-image {
   width: 100%;
-  height: 150px;
+  height: 200px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -320,6 +330,45 @@ main h1 {
   margin-left: 5px;
   font-size: 22px;
   font-weight: bold;
+}
+
+.game-solo-image {
+  width: 100%;
+  height: 250px;
+}
+
+.game-solo-title {
+  margin: 20px 10px 0px 10px;
+  border-bottom: 1px solid #252525;
+  padding-bottom: 20px;
+}
+
+.deal-prices {
+  margin: 20px 10px 10px 10px;
+}
+
+.deal-prices h1 {
+  margin-bottom: 15px;
+}
+
+.deal-prices h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.deal-prices h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-deals {
+  margin: 0px 10px 80px 10px
+}
+
+.search-label {
+  margin: 20px 0px;
+  text-align: center;
 }
 
 footer span {
