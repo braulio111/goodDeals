@@ -10,7 +10,7 @@ export const DealCard = (props) => {
 
   useEffect(() => {
     const fetchImage = async () => {
-      await axios.get(`https://cors-anywhere.herokuapp.com/https://store.steampowered.com/api/appdetails?appids=${steamID}`)
+      await axios.get(`https://store.steampowered.com/api/appdetails?appids=${steamID}`)
         .then(response => setBetterImage(response.data[steamID].data.header_image))
         .catch(err => console.log(err))
     }
