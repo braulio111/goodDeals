@@ -21,7 +21,7 @@ export const HomeScreen = () => {
 
   return (
     <>
-      <FeaturedDeal title={featuredDeal[0].title} price={featuredDeal[0].salePrice} image={featuredDeal[0].thumb}/>
+      <FeaturedDeal title={featuredDeal[0].title} price={featuredDeal[0].salePrice} image={featuredDeal[0].thumb} dealID={featuredDeal[0].dealID}/>
       <BestDeals />
       <SteamDeals />
       <NewDeals />

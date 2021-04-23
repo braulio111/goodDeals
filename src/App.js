@@ -19,7 +19,7 @@ function App() {
             <Route path="/deals" component={DealsScreen} exact />
             <Route path="/games" component={GamesScreen} exact />
             <Route path="/stores" component={StoreScreen} exact />
-            <Route path="/game/:id" component={DealScreen} />
+            <Route path="/deal/:id" component={DealScreen} />
             <Route path="/search/:game" component={SearchScreen} />
           </Switch>
         </main>

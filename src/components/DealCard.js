@@ -29,7 +29,7 @@ export const DealCard = (props) => {
   }, [steamID, storeID]);
 
   return (
-    <Link to={`/game/${dealID}`}>
+    <Link to={`/deal/${dealID}`}>
     <div className="deal-card">
       <img src={steamID ? betterImage : image} className="game-image" alt="" />
         <div className="deal-info">
