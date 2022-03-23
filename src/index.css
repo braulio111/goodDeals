@@ -1,52 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif !important;
+  font-family: "Noto Sans", sans-serif !important;
 }
 
 body {
@@ -55,7 +136,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -71,10 +152,10 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-areas: 
-  'header'
-  'main'
-  'footer';
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 60px 1fr 60px;
   height: 100%;
@@ -256,21 +337,22 @@ main h1 {
   text-align: center;
 }
 
-.featured-deal-info h2, .featured-deal-info h3 {
+.featured-deal-info h2,
+.featured-deal-info h3 {
   padding: 5px;
   border-radius: 5px;
   background-color: #d3d3d3ab;
 }
 
 .best-deals {
-  margin: 50px 10px 80px 10px;
+  margin: 40px 10px 80px 10px;
 }
 
 .best-deals-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .best-deals-label a {
@@ -314,7 +396,8 @@ main h1 {
   font-weight: bold;
 }
 
-.deal-title, .deal-store {
+.deal-title,
+.deal-store {
   font-weight: bold;
 }
 
@@ -369,7 +452,7 @@ main h1 {
 }
 
 .search-deals {
-  margin: 0px 10px 80px 10px
+  margin: 0px 10px 80px 10px;
 }
 
 .search-label {
@@ -388,6 +471,28 @@ footer span {
   height: 100vh;
 }
 
+.loading_icon-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steam-rating {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.steam-icon {
+  margin-right: 10px;
+}
+
+.deal-prices progress {
+  color: red;
+}
+
 @media (min-width: 769px) {
   .navbar-menu {
     display: none;
@@ -397,7 +502,8 @@ footer span {
     width: 50%;
   }
 
-  .navbar-links, .navbar-logo-title {
+  .navbar-links,
+  .navbar-logo-title {
     display: block;
   }
 }

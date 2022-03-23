@@ -8,6 +8,7 @@ export const SearchScreen = (props) => {
   const [deals, setDeals] = useState([]);
 
   useEffect(() => {
+    // Búsqueda en base al nombre del juego en la URL
     const fetchDeals = async () => {
       await axios.get(`https://www.cheapshark.com/api/1.0/deals?title=${searchQuery}&pageSize=12`)
         .then(response => setDeals(response.data))
