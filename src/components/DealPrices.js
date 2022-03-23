@@ -41,9 +41,9 @@ export const DealPrices = (props) => {
         ratingText ? 
         <>
         <h3>{ratingText}</h3>
-        <progress value={ratingPercent} max="100" /><span>{ratingPercent} %</span>
+        <progress value={ratingPercent} max="100" /><span> {ratingPercent} %</span>
         </> : 
-        <h2>Not on Steam</h2>
+        <h2>Not Found</h2>
       }
     </div>
   )
