@@ -3,17 +3,17 @@ import React, { useEffect, useState } from "react";
 import Loader from "react-loader-spinner";
 import { DealCard } from "./DealCard";
 
-export const BestDeals = ({ endpoint }) => {
+export const BestDeals = ({ parameters }) => {
   const [deals, setDeals] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchDeals = async () => {
       await axios
-        .get(`https://www.cheapshark.com/api${endpoint}`)
+        .get(`https://www.cheapshark.com/api/1.0/deals`, { params: parameters })
         .then((response) => {
           // Ignore first game deal since it is featured at the top
-          endpoint === "/1.0/deals?pageSize=9"
+          parameters.pageSize === 9
             ? setDeals(response.data.slice(1, response.data.length))
             : setDeals(response.data);
           setLoading(false);
@@ -22,7 +22,7 @@ export const BestDeals = ({ endpoint }) => {
     };
 
     fetchDeals();
-  }, [endpoint]);
+  }, [parameters]);
 
   return (
     <div className="best-deals">

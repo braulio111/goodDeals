@@ -501,6 +501,11 @@ footer span {
   color: red;
 }
 
+.no-results {
+  height: 100vh;
+  text-align: center;
+}
+
 @media (min-width: 769px) {
   .navbar-menu {
     display: none;

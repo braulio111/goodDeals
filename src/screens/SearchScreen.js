@@ -1,37 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { DealCard } from '../components/DealCard';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Loader from "react-loader-spinner";
+import { DealCard } from "../components/DealCard";
 
 export const SearchScreen = (props) => {
   const searchQuery = props.match.params.game;
 
   const [deals, setDeals] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Búsqueda en base al nombre del juego en la URL
+    // Search by game title on searchbar
     const fetchDeals = async () => {
-      await axios.get(`https://www.cheapshark.com/api/1.0/deals?title=${searchQuery}&pageSize=12`)
-        .then(response => setDeals(response.data))
-        .catch(err => console.log(err))
-    }
+      await axios
+        .get(`https://www.cheapshark.com/api/1.0/deals`, {
+          params: { title: searchQuery, pageSize: 12 },
+        })
+        .then((response) => {
+          setDeals(response.data);
+          console.log(response.data);
+          setLoading(false);
+        })
+        .catch((err) => console.log(err));
+    };
 
     fetchDeals();
-  }, [searchQuery])
+  }, [searchQuery]);
 
   return (
     <>
-    <h1 className="search-label">Search for: {searchQuery}</h1>
-    <div className="search-deals">
-      <div className="deal-cards-wrap">
-        {
-          deals.map(deal => {
-            return(
-              <DealCard key={deal.dealID} deal={deal} />
-            );
-          })
-        }
-      </div>
-    </div>
+      <h1 className="search-label">Search for: {searchQuery}</h1>
+      {loading ? (
+        <Loader type="ThreeDots" color="#000" className="loading_icon"></Loader>
+      ) : deals.length ? (
+        <div className="search-deals">
+          <div className="deal-cards-wrap">
+            {deals.map((deal) => {
+              return <DealCard key={deal.dealID} deal={deal} />;
+            })}
+          </div>
+        </div>
+      ) : (
+        <h1 className="no-results">No results found.</h1>
+      )}
     </>
-  )
-}
+  );
+};
